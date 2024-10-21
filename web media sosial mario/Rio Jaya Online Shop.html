@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio Jaya Online Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff5722, #ffc107);
+            color: #212121;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            max-width: 600px;
+            margin: auto;
+        }
+        .link {
+            display: block;
+            background-color: #00796b;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.1em;
+        }
+        .link:hover {
+            background-color: #004d40;
+            transform: translateY(-2px);
+        }
+        img.logo {
+            max-width: 120px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        img.logo:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #212121;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        /* Style untuk modal */
+        .modal {
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s; /* Animasi muncul */
+        }
+        .modal img {
+            max-width: 300px; /* Ukuran gambar dalam modal */
+            border-radius: 10px;
+            animation: zoomIn 0.3s; /* Animasi zoom in */
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close:hover {
+            color: #ff5722; /* Warna saat hover */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="d:\web media sosial mario\WhatsApp Image 2024-10-21 at 17.55.01.jpeg" alt="Logo Toko" class="logo" id="logoImage">
+        <h1>Rio Jaya Online Shop</h1>
+        <p>𝗧𝗼𝗸𝗼 𝗧𝗮𝘀 𝗧𝗟 𝗦𝗶𝗻𝗴𝗮𝗽𝗼𝗿𝗲, 𝗡𝗼 𝗠𝗶𝗻𝘂𝘀, 𝗔𝘀𝗹𝗶 💯℅</p>
+
+        <a class="link" href="https://wa.me/6285973057455" target="_blank">Hubungi Kami via WhatsApp</a>
+        <a class="link" href="https://www.facebook.com/marketplace/profile/100010274856215/?ref=permalink&mibextid=dXMIcH" target="_blank">Ikuti Kami di Facebook</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rio Jaya Online Shop</p>
+    </footer>
+
+    <script>
+        function showImage(src) {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+
+            const img = document.createElement('img');
+            img.src = src;
+
+            const closeBtn = document.createElement('span');
+            closeBtn.textContent = '✖';
+            closeBtn.className = 'close';
+            closeBtn.onclick = function() {
+                document.body.removeChild(modal);
+            };
+
+            modal.appendChild(img);
+            modal.appendChild(closeBtn);
+            document.body.appendChild(modal);
+        }
+    </script>
+</body>
+</html>
